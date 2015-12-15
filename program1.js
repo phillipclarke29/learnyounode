@@ -1,8 +1,14 @@
 var fs = require('fs')
 var lines = ''
 
-buff = fs.readFileSync('program.js')
+buff = fs.readFileSync(process.argv[2])
 
-lines = buff.toString();
+lines = buff.toString().split('');
 
-console.log(lines)
+var count = 0;
+for(var i = 0; i < lines.length; ++i){
+    if(lines[i] == '\n')
+        count++;
+}
+
+console.log(count);
