@@ -2,7 +2,6 @@ var fs = require('fs')
 var lines = ''
 
 buff = fs.readFileSync(process.argv[2])
-
 lines = buff.toString().split('');
 
 var count = 0;
